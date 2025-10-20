@@ -33,10 +33,20 @@ const CountryList = () => {
       <h1 className="text-3xl font-bold mb-4">Countries</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {countries.map((country, index) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <Link key={index} to={`/CountryDetails/${country.name.common}`}>
+=======
+>>>>>>> 5365f78
           <Link
             key={index}
             to={`/CountryDetails/${encodeURIComponent(country.name.common)}`}
           >
+<<<<<<< HEAD
+=======
+>>>>>>> b6198cb (update vercel)
+>>>>>>> 5365f78
             <div className="p-4 border rounded-xl shadow-md flex flex-col items-center hover:bg-gray-100 cursor-pointer">
               <img
                 src={country.flags?.png || defaultFlag}

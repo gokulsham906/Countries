@@ -10,13 +10,30 @@ const CountryDetails = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+<<<<<<< HEAD
     fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(name)}`)
+=======
+<<<<<<< HEAD
+    // Fetch using flexible search (no fullText)
+    fetch(`https://restcountries.com/v3.1/name/${name}`)
+=======
+    fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(name)}`)
+>>>>>>> b6198cb (update vercel)
+>>>>>>> 5365f78
       .then((res) => {
         if (!res.ok) throw new Error("Network response was not ok");
         return res.json();
       })
       .then((data) => {
+<<<<<<< HEAD
         setCountry(data[0]);
+=======
+<<<<<<< HEAD
+        setCountry(data[0]); // first match
+=======
+        setCountry(data[0]);
+>>>>>>> b6198cb (update vercel)
+>>>>>>> 5365f78
         setLoading(false);
       })
       .catch((err) => {
@@ -28,7 +45,14 @@ const CountryDetails = () => {
 
   if (loading) return <Loading />;
   if (error) return <p className="text-red-500">{error}</p>;
+<<<<<<< HEAD
   if (!country) return <p>No details found.</p>;
+=======
+<<<<<<< HEAD
+=======
+  if (!country) return <p>No details found.</p>;
+>>>>>>> b6198cb (update vercel)
+>>>>>>> 5365f78
 
   return (
     <div className="p-4">
